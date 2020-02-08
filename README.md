@@ -61,21 +61,21 @@ You have been given a robot with very basic capabilities:
   * It can compare the item it's holding to the item in front of it.
   * It can switch a light on its head on or off.
 
-Your task is to program this robot to sort lists using ONLY these abilities.
+[X] Your task is to program this robot to sort lists using ONLY these abilities.
 
 ##### Rules
 
 Inside the `robot_sort` directory you'll find the `robot_sort.py` file. Open it up and read through each of the robot's abilities. Once you've understood those, start filling out the `sort()` method following these rules:
 
-  * You may use any pre-defined robot methods.
-  * You may NOT modify any pre-defined robot methods.
+  * You may use any pre-defined robot methods. [X]
+  * You may NOT modify any pre-defined robot methods. [X]
   * You may use logical operators. (`if`, `and`, `or`, `not`, etc.)
-  * You may use comparison operators. (`>`, `>=`, `<`, `<=`, `==`, `is`, etc.)
-  * You may use iterators. (`while`, `for`, `break`, `continue`)
-  * You may NOT store any variables. (`=`)
-  * You may NOT access any instance variables directly. (`self._anything`)
-  * You may NOT use any Python libraries or class methods. (`sorted()`, etc.)
-  * You may define robot helper methods, as long as they follow all the rules.
+  * You may use comparison operators. (`>`, `>=`, `<`, `<=`, `==`, `is`, etc.) [X]
+  * You may use iterators. (`while`, `for`, `break`, `continue`) [X]
+  * You may NOT store any variables. (`=`) [X]
+  * You may NOT access any instance variables directly. (`self._anything`) [X]
+  * You may NOT use any Python libraries or class methods. (`sorted()`, etc.) [X]
+  * You may define robot helper methods, as long as they follow all the rules. [X]
 
 ##### Hints
 
