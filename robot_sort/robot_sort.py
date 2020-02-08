@@ -96,8 +96,47 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
-        pass
+        # let's try for something akin to a bubble sort
+        # Set light "ON" to indicate that the robot has started sorting 
+        # While light is "ON", Robot is sorting
+            # Set light "OFF" - This is a flag that if it remains off, we know we are done
+            # If robot is at start, it can't move left, so swap_item() to pick up nothing(ie. pick up first item) (Robot is holding nothing at start)
+            # While the robot can move left
+                # Move left
+                # Until you hit the position where there are no items, furthest part of the left
+                    # (b/c all items before this are sorted)
+                    # Drop the sorted item into the none position and stop moving left
+            # While the robot can move right 
+                # The robot will continue moving right
+                # If the robot arrives at the last item AND is holding nothing
+                    # Robot turns light "OFF" (to indicate we are done and break out of outer loop)
+                    # Exit loop as the robot's list is sorted
+                # Compare items (if there is an item in its hand or there is nothing and it can still move right or found something bigger)
+                    # If item comparison returns 1, it means the item  it's holding is greater than item in front
+                        # So, let's wwap items
+                        # Set light "ON" (so we don't leave big outer loops)
+        # When light off, self._list should be sorted
+    
+        self.set_light_on() # Let's use the Robot's light as a flag to indicate it's moving
+        while self.light_is_on():
+            self.set_light_off()
+            if self.can_move_left() is False:
+                self.swap_item()
+            while self.can_move_left():
+                self.move_left()
+                if self.compare_item() is None:
+                    self.swap_item()
+                    break #go back to outer loop               
+            while self.can_move_right():
+                self.move_right()
+                if self.can_move_right() is False and self.compare_item() is None: #nothing to do because we're sorting
+                    self.set_light_off()
+                    break #Cannot go further because everything is sorted; no more sorting condition met
+                if self.compare_item() is None or self.compare_item() == 1: 
+                    self.swap_item()
+                    self.set_light_on()
+      
+
 
 
 if __name__ == "__main__":
