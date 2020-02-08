@@ -48,4 +48,19 @@ Suppose that you have an n-story building and plenty of eggs. Suppose also that 
 
 Write out your proposed algorithm in plain English or pseudocode AND give the runtime complexity of your solution.
 ```
+Some preliminary minor questions I had:
+- Do I have to factor or take into consideration going up and down the stairs to the ground floor to verify that the egg is broken? 
+- How am I traveling between the floors? Whether I have to take the stairs or I am allowed to take the elevator?
+
+Assuming that traveling between the floors and verifying if eggs are broken is trivial, my first pass solution for this problem would be to employ a sort of modified binary search approach: 
+- The floors of a building in some sense constitute an ordered list (the third floor must come before the 15th floor). 
+- Binary search is used as a quick means of guessing a number chosen from a list of possible numbers and guessing which is the minimum floor f at which an egg would not be broken, anything below f is assumed safe. 
+
+Here are the steps:
+- I would find "the middle floor" of the building (that is what is the midpoint, e.g. around 5th floor for 10-story building). 
+- I would then drop an egg off this floor.
+- If egg breaks, I would divide the remaining floors in half (e.g. if egg breaks at 5 in ten story building, go to floor 3) and go to the new "middle floor" and start testing there and so on and so on dividing in half each subsequent test if the eggs continue breaking 
+- One thing to watch out for would be if the egg did not break (e.g. if egg does not break at 3rd floor, it's possible it would still not break at fourth floor; it would obviously not break at anything below 3) 
+
+Worst case we are looking at O(log n) but best case is O(1); average case is also O(log n)
 
