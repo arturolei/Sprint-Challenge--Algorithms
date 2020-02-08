@@ -3,6 +3,13 @@
 ## Exercise I
 
 a)
+```python
+a)  a = 0
+    while (a < n * n * n):
+      a = a + n * n
+```
+
+The runtime
 
 
 b)
