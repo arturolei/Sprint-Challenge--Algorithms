@@ -103,7 +103,7 @@ class SortingRobot:
             # If robot is at start, it can't move left, so swap_item() to pick up nothing(ie. pick up first item) (Robot is holding nothing at start)
             # While the robot can move left
                 # Move left
-                # Until you hit the position where there are no items 
+                # Until you hit the position where there are no items, furthest part of the left
                     # (b/c all items before this are sorted)
                     # Drop the sorted item into the none position and stop moving left
             # While the robot can move right 
@@ -126,7 +126,7 @@ class SortingRobot:
                 self.move_left()
                 if self.compare_item() is None:
                     self.swap_item()
-                    break                
+                    break #go back to outer loop               
             while self.can_move_right():
                 self.move_right()
                 if self.can_move_right() is False and self.compare_item() is None: #nothing to do because we're sorting
