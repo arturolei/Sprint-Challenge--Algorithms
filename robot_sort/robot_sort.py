@@ -113,7 +113,7 @@ class SortingRobot:
                     # Exit loop as the robot's list is sorted
                 # Compare items (if there is an item in its hand or there is nothing and it can still move right or found something bigger)
                     # If item comparison returns 1, it means the item  it's holding is greater than item in front
-                        # Swap items
+                        # So, let's wwap items
                         # Set light "ON" (so we don't leave big outer loops)
         # When light off, self._list should be sorted
     
@@ -131,7 +131,7 @@ class SortingRobot:
                 self.move_right()
                 if self.can_move_right() is False and self.compare_item() is None: #nothing to do because we're sorting
                     self.set_light_off()
-                    break #Cannot go further because everything is sorted
+                    break #Cannot go further because everything is sorted; no more sorting condition met
                 if self.compare_item() is None or self.compare_item() == 1: 
                     self.swap_item()
                     self.set_light_on()
