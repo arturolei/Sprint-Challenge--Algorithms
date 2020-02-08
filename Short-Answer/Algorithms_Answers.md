@@ -37,7 +37,7 @@ def bunnyEars(bunnies):
 
       return 2 + bunnyEars(bunnies-1)
 ```
-This is a recursive function, so we can perhaps assume that the total running time is sum of each of recursive call; each recursive call either results in an addition of `0` or another additive operation (another `2` being added to the sum). 
+This is a recursive function, so we can perhaps assume that the total running time is sum of each of recursive call; each recursive call either results in an addition of `0` or another additive operation (another `2` being added to the sum). Thus, we have O(n)
 
 
 
@@ -48,6 +48,7 @@ Suppose that you have an n-story building and plenty of eggs. Suppose also that 
 
 Write out your proposed algorithm in plain English or pseudocode AND give the runtime complexity of your solution.
 ```
+
 Some preliminary minor questions I had:
 - Do I have to factor or take into consideration going up and down the stairs to the ground floor to verify that the egg is broken? 
 - How am I traveling between the floors? Whether I have to take the stairs or I am allowed to take the elevator?
@@ -62,5 +63,5 @@ Here are the steps:
 - If egg breaks, I would divide the remaining floors in half (e.g. if egg breaks at 5 in ten story building, go to floor 3) and go to the new "middle floor" and start testing there and so on and so on dividing in half each subsequent test if the eggs continue breaking 
 - One thing to watch out for would be if the egg did not break (e.g. if egg does not break at 3rd floor, it's possible it would still not break at fourth floor; it would obviously not break at anything below 3) 
 
-Worst case we are looking at O(log n) but best case is O(1); average case is also O(log n)
+Worst case in terms of runtime complexity we are looking at O(log n) but best case is O(1); average case is also O(log n)
 

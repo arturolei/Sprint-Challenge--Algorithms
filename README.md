@@ -30,13 +30,13 @@ For this portion of the Sprint Challenge, you'll be answering questions posed in
 
 #### 1. Analyzing runtime _(3 points)_
 
-Given 3 blocks of code, identify the runtime of each. Justify your answer.
+[X] Given 3 blocks of code, identify the runtime of each. Justify your answer.
 
 #### 2. Find the highest floor _(3 points)_
 
 Suppose that you have an n-story building and plenty of eggs. Suppose also that an egg gets broken if it is thrown off floor f or higher, and doesn't get broken if dropped off a floor less than floor f. Devise a strategy to determine the value of f such that the number of dropped + broken eggs is minimized.
 
-Write out your proposed algorithm in plain English or pseudocode AND give the runtime complexity of your solution.
+[X] Write out your proposed algorithm in plain English or pseudocode AND give the runtime complexity of your solution.
 
 ### Code Challenges
 
